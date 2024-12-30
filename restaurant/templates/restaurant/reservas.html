@@ -1,0 +1,50 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/reservas.css' %}?v={{ STATIC_VERSION }}">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% endblock extra_styles %}
+{% block title %}Gestión de Reservas{% endblock %}
+{% block content %}
+<h3>
+    <a class="volver" href="/">Volver al Inicio</a>
+</h3>
+<h2>Gestión de Reservas</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    <h3>Registrar Reserva</h3>
+    {{ form.as_p }}
+    <button class="boton-de-reservas" type="submit">Registrar Reserva</button>
+</form>
+
+<h3>Buscar Reserva</h3>
+<form method="GET">
+    {{ buscar_form.as_p }}
+    <button class="boton-de-reservas" type="submit">Buscar</button>
+</form>
+{% if form.errors %}
+    <div class="error">
+        {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<h3>Reservas</h3>
+<ul>
+    {% for reserva in reservas %}
+    <li>
+        {{ reserva.nombre_cliente }} - Mesa {{ reserva.mesa.numero }} - Fecha: {{ reserva.fecha }} - Hora: {{ reserva.hora }}
+        <form action="{% url 'ver_reserva' reserva.id %}" method="get" style="display:inline;">
+            <button class="boton-de-reservas" type="submit">Ver Reserva</button>
+        </form>
+    </li>
+    {% empty %}
+    <p>No se encontraron reservas.</p>
+    {% endfor %}
+</ul>
+
+{% endblock %}

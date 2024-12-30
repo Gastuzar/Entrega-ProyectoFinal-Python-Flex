@@ -1,0 +1,27 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+
+{% block title %}Editar Plato - {{ plato.nombre }}{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<h3>
+    <a class="volver" href="/">Volver al Inicio</a>
+</h3>
+<h2>Editar Plato: {{ plato.nombre }}</h2>
+
+
+<form class="menu-form" method="POST" style="display:inline;">
+    {% csrf_token %}
+    {{ form.as_p }}  
+    <button class="boton-de-menu" type="submit">Guardar Cambios</button>
+</form>
+
+
+<form action="{% url 'ver_plato' plato.id %}" method="get" style="display:inline;">
+    <button class="boton-de-menu" type="submit">Ver Plato</button>
+</form>
+{% endblock %}

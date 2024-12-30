@@ -1,0 +1,53 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/editar_perfil.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Editar Perfil{% endblock %}
+
+{% block content %}
+<h3>
+    <a class="volver" href="/">Volver al Inicio</a>
+</h3>
+<div class="editar_perfil">
+    <h1>Editar perfil de usuario</h1>
+    <form class="editar_perfil-form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if miFormulario %}
+            {{ miFormulario.errors }}
+        {% endif %}
+        
+        <table class="table">
+            {{ miFormulario.as_table }}
+        </table>
+        
+        <div class="form-group">
+            <label class="form-label" for="imagen">Seleccionar imagen de perfil</label>
+            <input type="file" name="imagen" id="imagen">
+        </div>
+        
+        {% if not imagen_form %}
+            <div id="imagen-form-container">
+                <table class="table">
+                    {{ imagen_form.as_table }}
+                </table>
+            </div>
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+         
+        {% endif %}
+        
+        <input class="editar_perfil-button" type="submit" value="Guardar cambios" />
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,192 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #1b1a19;
+}
+
+h3 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+h3 a.volver {
+    display: inline-block;
+    color: #1b1a19;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #1b1a19;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+h3 a.volver:hover {
+    background-color: #6e5b4a;
+    color: #fff;
+}
+
+.editar_perfil {
+    background-color: #fff8f0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.editar_perfil h1 {
+    font-family: 'Lobster Two', cursive;
+    color: #6e5b4a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+.table tr td {
+    padding: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tr td:first-child {
+    font-weight: bold;
+    color: #6e5b4a;
+}
+
+.table tr td input,
+.table tr td select,
+.table tr td textarea {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s ease;
+}
+
+.table tr td input:focus,
+.table tr td select:focus,
+.table tr td textarea:focus {
+    border-color: #6e5b4a;
+    outline: none;
+}
+
+.editar_perfil-button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #6e5b4a;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 250px;
+    margin: 1rem auto;
+    display: block;
+    text-align: center;
+}
+
+.editar_perfil-button:hover {
+    background-color: #1b1a19;
+    transform: scale(1.05);
+}
+
+.editar_perfil-button:focus {
+    outline: 2px solid #f4f4f9;
+    outline-offset: 3px;
+}
+
+.table input[type="file"] {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff; 
+    color: #6e5b4a;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto; 
+}
+
+.table input[type="file"]:hover {
+    background-color: #6e5b4a;
+    color: #fff;
+}
+
+.table input[type="file"]:focus {
+    outline: none;
+    border-color: #1b1a19;
+    box-shadow: 0 0 0 3px rgba(110, 91, 74, 0.3);
+}
+
+ul.messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+ul.messages li {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+ul.messages li.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+ul.messages li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#imagen-form-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#imagen-form-container table {
+    margin: 0;
+}
+
+.form-group {
+    margin-top: 1rem;
+}
+
+.form-group input[type="file"] {
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #6e5b4a;
+}
+
+.form-group input[type="file"]:hover {
+    background-color: #6e5b4a;
+    color: white;
+}
+
+.form-group .form-label{
+    font-weight: bold;
+    color: #1b1a19;
+}

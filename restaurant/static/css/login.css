@@ -1,0 +1,68 @@
+.login {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff8f0;
+    color: #1b1a19;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 3rem auto; 
+    text-align: center;
+}
+
+.login h2 {
+    font-family: 'Lobster Two', cursive;
+    color: #6e5b4a;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form input[type="submit"] {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #6e5b4a;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #1b1a19;
+    transform: scale(1.05);
+}
+
+.register-link {
+    color: #6e5b4a;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #1b1a19;
+    text-decoration: underline;
+}
+
+.login p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login p a {
+    color: #1b1a19;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login p a:hover {
+    text-decoration: underline;
+}

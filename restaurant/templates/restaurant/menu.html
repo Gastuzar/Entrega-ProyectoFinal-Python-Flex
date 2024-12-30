@@ -1,0 +1,40 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Menú{% endblock %}
+{% block content %}
+
+<h3>
+    <a class="volver" href="/">Volver al Inicio</a>
+</h3>
+<div class="menu-container">
+    <h2>Gestión del Menú(agregar plato)</h2>
+    <form class="menu-form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="boton-de-menu" type="submit">Agregar Plato</button>
+    </form>
+    <h3>Buscar Plato</h3>
+    <form class="buscar-form" method="GET">
+        {{ buscar_form.as_p }}
+        <button class="boton-de-menu" type="submit">Buscar</button>
+    </form>
+    <h3>Platos ya creados</h3>
+    <ul>
+        {% for plato in platos %}
+            <li>
+                {{ plato.nombre }} - {{ plato.categoria }} - ${{ plato.precio }} - 
+                <form action="{% url 'ver_plato' plato.id %}" method="get" style="display:inline;">
+                    <button class="boton-de-menu" type="submit">Ver Plato</button>
+                </form>
+            </li>
+        {% empty %}
+            <p>No hay platos creados</p>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</div>

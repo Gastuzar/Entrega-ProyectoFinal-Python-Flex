@@ -1,0 +1,34 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/about_me.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Acerca de mí{% endblock %}
+{% block content %}
+<h3>
+    <a class="volver" href="/">Volver al Inicio</a>
+</h3>
+
+<div class="acerca-de-mi">
+
+    <div class="redes-sociales">
+        <h1>Acerca de mí</h1>
+        <a href="https://github.com/Gastuzar">
+            <img src="{% static 'img/github.png' %}" class="github-imagen" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/gastón-zarate25/">
+            <img src="{% static 'img/linkedin.png' %}" class="linkedin-imagen" alt="LinkedIn">
+        </a>
+    </div>
+    
+    <div class="acerca-de-mi-contenido">
+        <img src="{% static 'img/yo.jpeg' %}" alt="Dueño de la página" class="acerca-de-mi-imagen">
+        <p class="descripcion">
+            {{presentacion}}
+        </p>
+    </div>
+</div>
+
+{% endblock %}

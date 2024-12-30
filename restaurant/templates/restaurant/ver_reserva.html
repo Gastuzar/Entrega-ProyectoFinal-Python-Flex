@@ -1,0 +1,27 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/reservas.css' %}?v={{ STATIC_VERSION }}">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+{% endblock extra_styles %}
+{% block title %}Ver Reservas{% endblock %}
+{% block content %}
+<h3>
+    <a class="volver" href="/">Volver al Inicio</a>
+</h3>
+<div class="reserva-container">
+    <h2>{{ reserva.nombre_cliente }}</h2>
+    <p><strong>Mesa:</strong> {{ reserva.mesa.numero }}</p>
+    <p><strong>Fecha:</strong> {{ reserva.fecha }}</p>
+    <p><strong>Hora:</strong> {{ reserva.hora }}</p>
+    <form action="{% url 'eliminar_reserva' reserva.id %}" method="post" style="display:inline-flex;">
+        {% csrf_token %}
+        <button class="boton-de-reservas" type="submit">Eliminar Reserva</button>
+    </form>
+    <form action="{% url 'editar_reserva' reserva.id %}" method="get" style="display:inline-flex;">
+        <button class="boton-de-reservas" type="submit">Editar Reserva</button>
+    </form>
+    <p>
+    <a class="volver" href="{% url 'reservas' %}">Volver a Reservas</a>
+</div>
+{% endblock %}

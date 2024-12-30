@@ -1,0 +1,108 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #1b1a19;
+}
+
+.acerca-de-mi {
+    background-color: #fff8f0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.acerca-de-mi h1 {
+    font-family: 'Lobster Two', cursive;
+    color: #6e5b4a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.acerca-de-mi-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.acerca-de-mi-imagen {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.descripcion {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #1b1a19;
+    max-width: 500px;
+    margin: 0;
+}
+
+h3 a.volver {
+    display: inline-block;
+    color: #1b1a19;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #1b1a19;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+h3 a.volver:hover {
+    background-color: #6e5b4a;
+    color: #fff;
+}
+.github-imagen {
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.redes-sociales {
+    display:flex; 
+    justify-content: right; 
+    gap: 20px; 
+    margin-top: 0px; 
+    margin-bottom: 0.6rem; 
+    margin-right: 4rem;
+}
+
+.github-imagen, .linkedin-imagen {
+    width: 35px; 
+    height: 35px; 
+    object-fit: contain; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    margin-top: 2.2rem;
+}
+
+.github-imagen:hover, .linkedin-imagen:hover {
+    transform: scale(1.1); 
+    opacity: 0.8; 
+}
+
+.redes-sociales a {
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+    color: #6e5b4a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}

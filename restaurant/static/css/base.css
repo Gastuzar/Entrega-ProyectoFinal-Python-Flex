@@ -1,0 +1,137 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f9;
+    color: #141414;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #f4f4f9;
+    color: #141414;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Lobster Two', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin: 10px 0;
+    font-size: 4rem;
+}
+
+header nav a {
+    font-family: 'Lobster Two', sans-serif;
+    color: #1b1a19;  
+    transition: color 0.3s ease;
+    text-decoration: none;  
+    margin: 0 15px;  
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+header nav a:hover {
+    font-family: 'Lobster Two', sans-serif;
+    color: #6e5b4a;  
+    text-decoration: underline; 
+}
+
+
+header nav ul {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-image: url('../img/fondo1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: repeat; 
+    min-height: 100vh;
+    padding: 2rem; 
+}
+
+.home-page .welcome {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 100px; 
+    color: #1b1a19; 
+    text-align: left; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 65vh;
+    flex-direction: column;
+    line-height: 1.2; 
+}
+.editar-perfil {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background: #f4f4f9;
+    color: #1b1a19;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem auto; 
+    max-width: 400px; 
+    width: 90%; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+.editar-perfil:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); 
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    background: #f4f4f9;
+    color: #1b1a19;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.volver {
+    display: inline-block;
+    color: #1b1a19;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid  #1b1a19;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.volver:hover {
+    background-color: #6e5b4a;
+    color: #fff;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
